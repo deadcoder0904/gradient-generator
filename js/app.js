@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded',function() {
 		let temp = {};
 		temp[name] = e.target.valueAsNumber;
 		rgbs = Object.assign({},rgbs, temp);
-		document.querySelector('.gradient').style.background = `linear-gradient(150deg, rgba(${rgbs.r1}, ${rgbs.g1}, ${rgbs.b1},${rgbs.alpha1}),
-																																						   rgba(${rgbs.r2}, ${rgbs.g2}, ${rgbs.b2},${rgbs.alpha2}))`;
+		document.querySelector('.gradient').style.background = `linear-gradient(150deg, rgba(${rgbs.r1}, ${rgbs.g1}, ${rgbs.b1},${rgbs.alpha1.toFixed(2)}),
+																																						   rgba(${rgbs.r2}, ${rgbs.g2}, ${rgbs.b2},${rgbs.alpha2.toFixed(2)}))`;
 	}
 
 	document.querySelector('.gradient').style.background = `linear-gradient(90deg, rgba(134, 196, 113, 0.992157), rgba(20, 55, 96, 0.992157))`;
