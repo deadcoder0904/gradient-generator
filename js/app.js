@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded',function() {
 		let temp = {};
 		temp[name] = e.target.valueAsNumber;
 		rgbs = Object.assign({},rgbs, temp);
-		document.querySelector('.gradient').style.background = `linear-gradient(150deg, rgba(${rgbs.r1}, ${rgbs.g1}, ${rgbs.b1},${rgbs.alpha1.toFixed(2)}),
-																																						   rgba(${rgbs.r2}, ${rgbs.g2}, ${rgbs.b2},${rgbs.alpha2.toFixed(2)}))`;
+		document.querySelector('.gradient').style.background = `linear-gradient(150deg, rgba(${rgbs.r1}, ${rgbs.g1}, ${rgbs.b1},${(+rgbs.alpha1).toFixed(2)}),
+																																						   rgba(${rgbs.r2}, ${rgbs.g2}, ${rgbs.b2},${(+rgbs.alpha2).toFixed(2)}))`;
 	}
 
 	document.querySelector('.gradient').style.background = `linear-gradient(90deg, rgba(134, 196, 113, 0.992157), rgba(20, 55, 96, 0.992157))`;
@@ -27,11 +27,11 @@ document.addEventListener('DOMContentLoaded',function() {
 		r1: +r1,
 		g1: +g1,
 		b1: +b1,
-		alpha1: +alpha1,
+		alpha1: (+alpha1).toFixed(2),
 		r2: +r2,
 		g2: +g2,
 		b2: +b2,
-		alpha2: +alpha2
+		alpha2: (+alpha2).toFixed(2)
 	};
 
 	inputs.forEach(input => input.addEventListener('change', e => {
@@ -45,9 +45,14 @@ document.addEventListener('DOMContentLoaded',function() {
 			changeColor(e);
 	}));
 
+	inputs.forEach(input => input.addEventListener('mouseover', e => {
+		if(isDown)
+			changeColor(e);
+	}));
+
 	inputs.forEach(input => input.addEventListener('mousedown', () => isDown = true));
 
-	inputs.forEach(input => input.addEventListener('mouseleave', () => isDown = false));
+	inputs.forEach(input => input.addEventListener('mouseout', () => isDown = false));
 
 	inputs.forEach(input => input.addEventListener('mouseup', () => isDown = false));
 });
