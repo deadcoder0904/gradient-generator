@@ -1,5 +1,7 @@
 # gradient-generator
 
+> Visualise your Gradients :heart_eyes:
+
 # Screenshot
 
 ![gradient-generator](http://imgur.com/Dgd7Gjj.png)

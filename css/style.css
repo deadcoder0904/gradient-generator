@@ -1,0 +1,161 @@
+* {
+	margin  : 0;
+	padding : 0;
+}
+
+html {
+	height : 100%;
+	user-select: none;
+}
+
+h1 {
+	color: white;
+	font-size: 4.3em;
+	text-align: center;
+	font-family: 'Verdana';
+	text-shadow: 10px 10px 5px #123;
+}
+
+label {
+	color: white;
+	font-size: 2em;
+	text-align: center;
+	font-family: 'Verdana';
+	text-shadow: 5px 3px 2px #123;
+}
+
+.gradient {
+	height: 100vh;
+}
+
+.bottom {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+
+.rgb {
+	display: flex;
+	flex-basis: 50%;
+	/*flex-flow: column wrap;*/
+	text-align: center;
+}
+
+.rgb > * {
+	flex: 1;
+}
+
+/* START */
+/* Grabbed from CSS-TRICKS https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/ */
+input[type=range] {
+	width              : 90%;
+	margin             : 18px 0;
+
+	-webkit-appearance : none;
+}
+
+input[type=range]:focus {
+	outline : none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+	height        : 30.4px;
+	width         : 100%;
+
+	cursor        : pointer;
+	background    : #3071a9;
+	border        : 0.2px solid #010101;
+	border-radius : 1.3px;
+	box-shadow    : 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+
+	animate       : 0.2s;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	height             : 36px;
+	width              : 16px;
+	margin-top         : -14px;
+
+	cursor             : pointer;
+	background         : #ffffff;
+	border             : 1px solid #000000;
+	border-radius      : 3px;
+	box-shadow         : 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+
+	-webkit-appearance : none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+	background : #367ebd;
+}
+
+input[type=range]::-moz-range-track {
+	height        : 8.4px;
+	width         : 100%;
+
+	cursor        : pointer;
+	background    : #3071a9;
+	border        : 0.2px solid #010101;
+	border-radius : 1.3px;
+	box-shadow    : 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+
+	animate       : 0.2s;
+}
+
+input[type=range]::-moz-range-thumb {
+	height        : 36px;
+	width         : 16px;
+
+	cursor        : pointer;
+	background    : #ffffff;
+	border        : 1px solid #000000;
+	border-radius : 3px;
+	box-shadow    : 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range]::-ms-track {
+	height       : 8.4px;
+	width        : 100%;
+
+	cursor       : pointer;
+	background   : transparent;
+	color        : transparent;
+	border-color : transparent;
+	border-width : 16px 0;
+
+	animate      : 0.2s;
+}
+
+input[type=range]::-ms-fill-lower {
+	background    : #2a6495;
+	border        : 0.2px solid #010101;
+	border-radius : 2.6px;
+	box-shadow    : 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range]::-ms-fill-upper {
+	background    : #3071a9;
+	border        : 0.2px solid #010101;
+	border-radius : 2.6px;
+	box-shadow    : 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range]::-ms-thumb {
+	height        : 36px;
+	width         : 16px;
+
+	cursor        : pointer;
+	background    : #ffffff;
+	border        : 1px solid #000000;
+	border-radius : 3px;
+	box-shadow    : 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+	background : #3071a9;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+	background : #367ebd;
+}
+/* END */
